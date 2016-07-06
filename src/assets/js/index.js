@@ -1,7 +1,6 @@
 import 'babel-polyfill'
-import $ from 'jquery'
 import Application from './Application';
-
+import $ from 'jquery';
 var $$ = $$ || {};
 
 $(function () {

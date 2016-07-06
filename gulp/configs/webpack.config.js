@@ -5,22 +5,28 @@ const webpack = require('webpack-stream').webpack;
 
 module.exports = {
 	devtool: 'cheap-module-inline-source-map',
-	/*entry:   [
-	 'webpack-hot-middleware/client',
-	 'babel-polyfill',
-	 './src/assets/js/index'
-	 ],*/
+	entry:   [
+		'babel-polyfill',
+		'./src/assets/js/index'
+	],
 	output:  {
-		filename: 'bundle.js'
+		path:          '/assets/js/',
+		filename:      '[name].js',
+		chunkFilename: '[id].chunk.js',
+		publicPath:    '/assets/js/'
 	},
 	plugins: [
+		new webpack.ProvidePlugin({
+			$:               "jquery",
+			jQuery:          "jquery",
+			"window.jQuery": "jquery"
+		}),
+		new webpack.optimize.CommonsChunkPlugin('bundle', 'bundle.js', Infinity),
 		new webpack.optimize.OccurenceOrderPlugin(),
 		new webpack.HotModuleReplacementPlugin(),
-		new webpack.NoErrorsPlugin(),
-		new NpmInstallPlugin()
+		new webpack.NoErrorsPlugin()
 	],
-
-	module: {
+	module:  {
 		preLoaders: [ //добавили ESlint в preloaders
 			{
 				test:    /\.js$/,
@@ -40,6 +46,6 @@ module.exports = {
 	},
 
 	resolve: {
-		modulesDirectories: [ 'src/assets/js', 'node_modules' ],
+		modulesDirectories: [ 'src/assets/js', 'node_modules' ]
 	}
 };

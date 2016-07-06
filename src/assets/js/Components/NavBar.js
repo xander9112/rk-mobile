@@ -1,4 +1,5 @@
 import Component from 'Component';
+import 'bootstrap';
 import $ from 'jquery';
 
 export default class NavBar extends Component {
@@ -24,8 +25,9 @@ export default class NavBar extends Component {
 		"use strict";
 
 		this.nodes = {
-			items:        this.root.find('.nav.navbar-nav a'),
-			navBarToggle: this.root.find('.navbar-toggle')
+			items:          this.root.find('.nav.navbar-nav a'),
+			navBarToggle:   this.root.find('.navbar-toggle'),
+			navBarCollapse: this.root.find('.navbar-collapse')
 		};
 	}
 
@@ -46,7 +48,13 @@ export default class NavBar extends Component {
 
 			this.scrollTo($(id).position().top);
 
-			this.nodes.navBarToggle.trigger('click');
+			this.nodes.navBarCollapse.collapse('toggle')
+		});
+
+		this.nodes.navBarToggle.on('click', (event) => {
+			event.preventDefault();
+
+			this.nodes.navBarCollapse.collapse('toggle')
 		});
 	}
 
@@ -58,6 +66,10 @@ export default class NavBar extends Component {
 
 	_ready () {
 		"use strict";
+
+		this.nodes.navBarCollapse.collapse({
+			toggle: false
+		});
 
 		this.navBarHeight = this.root.outerHeight(true);
 
