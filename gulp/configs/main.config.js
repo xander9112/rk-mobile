@@ -25,5 +25,5 @@ module.exports = {
         fonts:        'assets/fonts'
     },
     clean:      './assets/',
-    production: false
+    production: true
 };

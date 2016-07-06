@@ -1,3 +1,29 @@
-.g-title {
+main {
+  padding-top: 70px;
+}
 
+.b-section {
+  .section-title {
+	margin: 40px 0;
+  }
+
+  &.contacts {
+	.address {
+	  margin-bottom: 20px;
+	}
+
+	img {
+	  margin-bottom: 20px;
+	}
+  }
+}
+
+.b-images {
+  .row {
+	margin-bottom: 40px;
+  }
+}
+
+.b-solution {
+  margin: 40px 0;
 }

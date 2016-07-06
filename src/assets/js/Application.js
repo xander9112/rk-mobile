@@ -1,5 +1,5 @@
 import $ from 'jquery'
-import ExampleClass from './Components/ExampleClass';
+import NavBar from './Components/NavBar';
 
 export default class Application {
 	constructor () {
@@ -11,6 +11,6 @@ export default class Application {
 	_initFunction () {
 		"use strict";
 
-		new ExampleClass($('.js-test-class'), {});
+		new NavBar($('.js-nav-bar'), {});
 	}
 }
