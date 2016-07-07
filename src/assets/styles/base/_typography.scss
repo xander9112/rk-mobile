@@ -1,27 +1,15 @@
 @font-face {
-  @include createFont('Georgia', $GeorgiaRegular);
+  @include createFont('Roboto', $RobotoBold);
 }
 
 @font-face {
-  @include createFont('PTSans', $PTSansBold);
+  @include createFont('Roboto', $RobotoLight);
 }
 
 @font-face {
-  @include createFont('PTSans', $PTSansCaptionBold);
+  @include createFont('Roboto', $RobotoMedium);
 }
 
 @font-face {
-  @include createFont('PTSans', $PTSansRegular);
-}
-
-@font-face {
-  @include createFont('PTSerif', $PTSerifBoldItalic);
-}
-
-@font-face {
-  @include createFont('PTSerif', $PTSerifItalic);
-}
-
-@font-face {
-  @include createFont('PTSerif', $PTSerifRegular);
+  @include createFont('Roboto', $RobotoRegular);
 }
