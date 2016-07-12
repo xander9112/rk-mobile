@@ -4,7 +4,7 @@ body {
 }
 
 main {
-  padding-top: 70px;
+  padding-top: 50px;
 }
 
 .b-section {
@@ -31,4 +31,10 @@ main {
 
 .b-solution {
   margin: 40px 0;
+}
+
+.b-main-slider {
+  .carousel-caption {
+	bottom: 90px;
+  }
 }
