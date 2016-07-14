@@ -210,24 +210,41 @@
 			<!-- Wrapper for slides -->
 			<div class="carousel-inner" role="listbox">
 				<div class="item active">
-					<img src="./data/images/clients/ASC-logo-main-page.png" class="center-block"
-					     alt="Описание изображения">
-					<div class="carousel-caption"></div>
+					<!-- Button trigger modal -->
+					<a href="#" class="js-open-modal"
+					   data-title="ASC"
+					   data-body="Центр разработки программного продукта для анализа речи Команда разработки «Рексофт», занимается серьезной переработкой архитектуры продукта...">
+						<img src="./data/images/clients/ASC-logo-main-page.png" class="center-block"
+						     alt="Описание изображения">
+					</a>
 				</div>
 				<div class="item">
-					<img src="./data/images/clients/logo-aastra-main-page.png" class="center-block"
-					     alt="Описание изображения">
-					<div class="carousel-caption"></div>
+					<a href="#" class="js-open-modal"
+					   data-title="Aastra"
+					   data-body="Создание и настройка нового программного обеспечения компании">
+						<img src="./data/images/clients/logo-aastra-main-page.png" class="center-block"
+						     alt="Описание изображения">
+					</a>
 				</div>
 				<div class="item">
-					<img src="./data/images/clients/logo-alertlogic-main-page.png" class="center-block"
-					     alt="Описание изображения">
-					<div class="carousel-caption"></div>
+					<a href="#" class="js-open-modal"
+					   data-title="AlertLogic"
+					   data-body="Разработка компонентов системы анализа больших объемов данных
+Alert Logic требовался новый гибкий сервис для мгновенного обнаружения уязвимостей в корпоративных сетях заказчиков, работающий в режиме реального времени и позволяющий производить корреляционный анализ сетевых пакетов. При этом одним из основных требований была возможность расширения списка обнаруживаемых сетевых атак, и индивидуальная настройка этого сервиса под специфические нужды клиентов...
+
+Разработка компонентов программных продуктов
+Компании Alert Logic требовался поставщик услуг по аутсорсингу, который смог бы предоставить команду программистов высокой квалификации для разработки программных продуктов Alert Logic. Передача разработки ПО на аутсорсинг также должна была обеспечить снижение затрат...">
+						<img src="./data/images/clients/logo-alertlogic-main-page.png" class="center-block"
+						     alt="Описание изображения">
+					</a>
 				</div>
 				<div class="item">
-					<img src="./data/images/clients/logo-amedia-main-page.png" class="center-block"
-					     alt="Описание изображения">
-					<div class="carousel-caption"></div>
+					<a href="#" class="js-open-modal"
+					   data-title="Amedia"
+					   data-body="Разработка системы управления мульти-медийным контентом">
+						<img src="./data/images/clients/logo-amedia-main-page.png" class="center-block"
+						     alt="Описание изображения">
+					</a>
 				</div>
 			</div>
 
@@ -454,6 +471,22 @@
 <footer>
 	<p class="text-center text-danger">© Рексофт, 1991-2016</p>
 </footer>
+
+<!-- Modal -->
+<div class="modal fade js-info-modal" id="infoMidal" tabindex="-1" role="dialog" aria-labelledby="infoMidalLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<h4 class="modal-title js-modal-title" id="infoMidalLabel"></h4>
+			</div>
+			<div class="modal-body js-modal-body"></div>
+		</div>
+	</div>
+</div>
+
 <script src="./assets/vendor/vendor.js"></script>
 <script src="./assets/js/bundle.js"></script>
 <script src="./assets/js/main.js"></script>

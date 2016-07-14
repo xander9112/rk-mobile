@@ -1,5 +1,6 @@
 import $ from 'jquery';
 import NavBar from './Components/NavBar';
+import Modal from './Components/Modal';
 
 export default class Application {
 	constructor () {
@@ -12,5 +13,8 @@ export default class Application {
 		"use strict";
 
 		new NavBar($('.js-nav-bar'), {});
+		new Modal($('.js-info-modal'), {
+			triggerClass: '.js-open-modal'
+		});
 	}
 }
