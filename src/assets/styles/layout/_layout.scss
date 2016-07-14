@@ -38,3 +38,36 @@ main {
 	bottom: 90px;
   }
 }
+
+.carousel {
+  &.not-shadow {
+	.carousel-control {
+	  text-shadow: 0 5px 3px rgba(0, 0, 0, .6);
+
+	  &.right,
+	  &.left {
+		background-image: none;
+		background-repeat: repeat-x;
+		filter: none;
+	  }
+	}
+  }
+}
+
+.carousel-inner {
+  & > .item {
+	min-height: 130px;
+
+	img {
+	  vertical-align: middle;
+	}
+
+	&:before {
+	  content: '';
+	  width: 1px;
+	  height: 100%;
+	  display: inline-block;
+	  vertical-align: middle;
+	}
+  }
+}
